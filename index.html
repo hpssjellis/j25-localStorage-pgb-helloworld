@@ -1,0 +1,32 @@
+<body onload="{
+   myStored1=localStorage.getItem('myStoredButton')
+   alert(myStored1)
+   if(myStored1 != null){document.getElementById('B1').value=myStored1}
+}">  
+
+
+
+<body onunload="{ 
+   localStorage.setItem('myStoredButton',document.getElementById('B1').value)
+}">
+
+
+
+<input type="button" value="Flip from true to false" id="B1" onclick="{if(document.getElementById('B1').value=='true'){value='false'}
+   else{value=true}
+}">
+
+
+
+<input type="button" value="set item" onclick="{
+   localStorage.setItem('myStoredButton',document.getElementById('B1').value)
+   alert(document.getElementById('B1').value)
+}">
+
+
+
+<input type="button" value="get item" onclick="{
+   document.getElementById('B1').value= localStorage.getItem('myStoredButton')
+   alert(myStoredButton)
+}">
+	
