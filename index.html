@@ -1,7 +1,11 @@
 <body onload="{
-   myStored1=localStorage.getItem('myStoredButton')
-   alert(myStored1)
-   if(myStored1 != null){document.getElementById('myButtonId').value=myStored1}
+   myStored1 = localStorage.getItem('myStoredButton')
+   if(myStored1 != null){
+       document.getElementById('myButtonId').value=myStored1
+       alert('Already stored value = ' + myStored1)
+   } else {
+       alert('Nothing was stored for this site')
+   } 
 }">  
 
 
@@ -12,22 +16,24 @@
 
 
 
-<input type="button" value="Flip from true to false" id="myButtonId" onclick="{if(document.getElementById('myButtonId').value=='true'){value='false'}
-   else{value=true}
+<input type="button" value="Flip from true to false" id="myButtonId" onclick="{
+   if(document.getElementById('myButtonId').value == 'true'){
+      document.getElementById('myButtonId').value='false'
+   } else { document.getElementById('myButtonId').value = 'true' }
 }">
 
 
 
 <input type="button" value="set item" onclick="{
    localStorage.setItem('myStoredButton',document.getElementById('myButtonId').value)
-   alert(document.getElementById('myButtonId').value)
+   alert('Storing button value = ' + document.getElementById('myButtonId').value)
 }">
 
 
 
 <input type="button" value="get item" onclick="{
-   document.getElementById('myButtonId').value= localStorage.getItem('myStoredButton')
-   alert(myStoredButton)
-}">
-		
+    incomingValue = localStorage.getItem('myStoredButton')
+    alert('Getting stored value = ' + incomingValue)
+    document.getElementById('myButtonId').value = incomingValue
+}"> 		
 
