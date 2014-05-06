@@ -16,22 +16,25 @@
 
 
 
-<input type="button" value="Flip from true to false" id="myButtonId" onclick="{
-   if(document.getElementById('myButtonId').value == 'true'){
-      document.getElementById('myButtonId').value='false'
-   } else { document.getElementById('myButtonId').value = 'true' }
-}">
+<h1>j25-localStorage-pgb-helloworld</h1>
+
+
+<font  style="font-size:25px">Change the text and exit then reload the program to see if it was saved. </font>
+
+
+<input id="myButtonId"  type=text value="Did This Save"  style="font-size:25px" >
 
 
 
-<input type="button" value="set item" onclick="{
+
+<input type="button" value="set item" style="font-size:25px"  onclick="{
    localStorage.setItem('myStoredButton',document.getElementById('myButtonId').value)
    alert('Storing button value = ' + document.getElementById('myButtonId').value)
 }">
 
 
 
-<input type="button" value="get item" onclick="{
+<input type="button" value="get item" style="font-size:25px"  onclick="{
     incomingValue = localStorage.getItem('myStoredButton')
     alert('Getting stored value = ' + incomingValue)
     document.getElementById('myButtonId').value = incomingValue
