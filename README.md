@@ -7,6 +7,12 @@ Phonegap Build example of local storage
 Started on May 2, 2014
 
 
+Seems to work fine. I should be testing the localstorage after testing to see if the App has initialized but it seemed to work fine on my phone.
+
+
+
+
+
 
 
 ************************************************************************************************************
